@@ -60,11 +60,26 @@ export default function Navbar(props) {
                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
           </div> */}
 
-          <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-               {/* eslint-disable-next-line */}
-              <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault"/>
-               <label className={`form-check-label text-${props.mode==='dark'?'light':'dark'}`} htmlhtmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+          <div className="d-flex">
+            <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height:'30px', width:'30px', cursor:"pointer"}}></div>
           </div>
+          <div className="d-flex">
+            <div className="bg-success rounded mx-2" onClick={()=>{props.toggleMode('success')}} style={{height:'30px', width:'30px', cursor:"pointer"}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}} style={{height:'30px', width:'30px', cursor:"pointer"}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}} style={{height:'30px', width:'30px', cursor:"pointer"}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-light rounded mx-2 border border-dark" onClick={()=>{props.toggleMode('light')}} style={{height:'30px', width:'30px', cursor:"pointer"}}></div>
+          </div>
+          {/* <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+              //  eslint-disable-next-line
+              <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault"/>
+               <label className={`form-check-label text-${props.mode==='dark'?'light':'dark'}`} htmlhtmlFor="flexSwitchCheckDefault"></label>
+          </div>  */}
         </div>
       </div>
     </nav>
